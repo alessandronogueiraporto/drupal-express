@@ -1,0 +1,59 @@
+/**
+ * @file
+ * Maintenance theming.
+ */
+
+@media all and (min-width: 48em) { /* 768px */
+  html {
+    display: table;
+  }
+  .install-page,
+  .maintenance-page {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  html,
+  .install-page,
+  .maintenance-page {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  ul {
+    margin: 0.25em 0;
+    padding: 15px;
+  }
+  [dir="rtl"] ul {
+    margin-right: 0; /* Overrides default [dir="rtl"] ul margin */
+  }
+  
+  /*.layout-sidebar-first {
+    float: left; /* LTR */
+    /*width: 35%;
+  }
+  [dir="rtl"] .layout-sidebar-first {
+    float: right;
+  }*/
+
+
+}
+
+/**
+ * Status report customization for install and update page.
+ */
+.system-status-report__status-title {
+  float: none;
+  width: 100%;
+}
+.system-status-report__entry__value {
+  float: none;
+  width: 100%;
+  padding-top: 0;
+  padding-left: 3em; /* LTR */
+}
+[dir="rtl"] .system-status-report__entry__value {
+  padding-right: 3em;
+  padding-left: 1em;
+}

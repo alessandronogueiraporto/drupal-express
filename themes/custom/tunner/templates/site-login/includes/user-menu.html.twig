@@ -1,0 +1,21 @@
+<div class="part-02">
+
+  <div class="password_link">
+    <a href="{{ path('user.login') }}"><img src="{{ base_path ~ directory }}/images/icons/ic-login.png" title="{{ 'Login'|t }}" alt="{{ 'Login?'|t }}"></a>
+  </div>
+
+  <div class="password_link">
+    <a href="{{ path('user.pass') }}"><img src="{{ base_path ~ directory }}/images/icons/ic-password.png" title="{{ 'Forgot your password?'|t }}" alt="{{ 'Forgot your password?'|t }}"></a>
+  </div>
+
+  {% if register_url %}
+  <div class="register_link">
+    <a href="{{ register_url }}"><img src="{{ base_path ~ directory }}/images/icons/ic-register.png" title="{{ 'Register a new account'|t }}" alt="{{ 'Register a new account'|t }}"></a>
+  </div>
+  {% endif %}
+
+  <div class="back_site">
+    <a href="{{ url('<front>') }}"><img src="{{ base_path ~ directory }}/images/icons/ic-back.png" title="{{ 'Back'|t }}" alt="{{ 'Back'|t }}"></a>
+  </div>
+
+</div>

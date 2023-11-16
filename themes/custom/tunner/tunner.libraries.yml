@@ -1,0 +1,108 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      #Install theme
+      css/base/elements.css: {}
+    component:
+      #Install theme
+      css/components/header.css: {}
+      css/components/buttons.css: {}
+      css/components/main-content.css: {}
+      css/components/form.css: {}
+      css/classy/components/field.css: {}
+      css/classy/components/form.css: {}
+      css/classy/components/inline-form.css: {}
+      css/classy/components/link.css: {}
+      #Site theme
+      css/components/links.css: {}
+      css/components/headings.css: {}
+      css/components/tabs.css: {}
+      css/components/messages.css: {}
+    theme:
+      #Install theme
+      css/theme/colors.css: {}
+      css/install/install-layout-page.css: {}
+      #Site theme
+      css/layout/elements.css: {}
+      css/layout/layout.css: {}
+      css/layout/login.css: {}
+      css/layout/maintenance.css: {}
+      css/layout/languages.css: {}
+      css/layout/menu-mobile-simple.css: {}
+      css/layout/iconfonts.css: {}
+      css/layout/interfonts.css: {}
+      #css/layout/main.css: {}
+    layout:
+      css/install/layout-install.css: {}
+      css/layout/layout.css: {}
+  dependencies:
+    - system/admin
+    - core/jquery
+    - core/drupal
+
+  js:
+    #js/jquery/jquery-3.6.0.min.js: {}
+    js/languages.js: {}
+    js/menus/menu-mobile-simple.js: {}
+
+#bootstrap:
+#  version: VERSION
+#  css:
+#    base:
+      #js/bootstrap/css/bootstrap.css: {}
+      #js/bootstrap/css/bootstrap-grid.css: {}
+      #js/bootstrap/css/bootstrap-reboot.css: {}
+#  js:
+    #js/bootstrap/js/bootstrap.js: {}
+    #js/bootstrap/js/bootstrap.bundle.js: {}
+
+#Install Libraries
+
+transition-page:
+  version: VERSION
+  js:
+    #js/cover/jquery.min.js: {}
+    js/cover/background.cycle.js: {}
+  css:
+    component:
+      js/cover/background.cycle.css: {}
+
+maintenance-page:
+  version: VERSION
+  js:
+    js/mobile.install.js: {}
+  css:
+    theme:
+      css/theme/install-layout-page.css: {}
+  dependencies:
+    - system/maintenance
+    - install/global-styling
+
+install-page:
+  version: VERSION
+  js:
+    js/mobile.install.js: {}
+  css:
+    theme:
+      css/theme/install-page.css: {}
+  dependencies:
+    - install/maintenance-page
+
+user:
+  version: VERSION
+  css:
+    component:
+      css/components/user.css: { weight: -10 }
+
+classy.messages:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/messages.css: { weight: -10 }
+
+classy.progress:
+  version: VERSION
+  css:
+    component:
+      css/classy/components/progress.css: { weight: -10 }

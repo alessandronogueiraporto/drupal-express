@@ -1,0 +1,18 @@
+push_notification.admin_config_push_notification:
+  title: ' Push notification'
+  description: ' selection.'
+  route_name: push_notification.config
+  parent: 'system.admin_config'
+push_notification.config:
+  title: 'General settings'
+  description: 'Configure general settings for push notifications..'
+  route_name: push_notification.config
+  parent: 'push_notification.admin_config_push_notification'
+  menu_name: Push notification
+
+push_notification.add:
+  title: 'Push Notification'
+  description: 'General settings for push notifications..'
+  route_name: push_notification.add
+  parent: 'system.admin_content'
+  menu_name: Push notification

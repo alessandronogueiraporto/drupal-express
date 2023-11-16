@@ -1,0 +1,11 @@
+langcode: pt-br
+status: true
+dependencies: {  }
+id: feedback
+label: 'Comentários do site'
+recipients:
+  - admin@example.com
+reply: ''
+weight: 0
+message: 'Sua mensagem foi enviada.'
+redirect: ''

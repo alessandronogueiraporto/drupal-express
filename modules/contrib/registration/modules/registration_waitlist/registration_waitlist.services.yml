@@ -1,0 +1,17 @@
+services:
+
+  registration_waitlist.logger:
+    parent: logger.channel_base
+    arguments: [
+      'registration_waitlist',
+    ]
+
+  registration_waitlist.registration_form_event_subscriber:
+    class: Drupal\registration_waitlist\EventSubscriber\RegistrationFormEventSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  registration_waitlist.registration_settings_event_subscriber:
+    class: Drupal\registration_waitlist\EventSubscriber\RegistrationSettingsEventSubscriber
+    tags:
+      - { name: event_subscriber }

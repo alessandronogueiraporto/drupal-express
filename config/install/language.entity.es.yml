@@ -1,0 +1,8 @@
+langcode: pt-br
+status: true
+dependencies: {  }
+id: es
+label: Espanhol
+direction: ltr
+weight: -8
+locked: false

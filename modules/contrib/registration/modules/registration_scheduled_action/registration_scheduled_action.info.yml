@@ -1,0 +1,14 @@
+name: Registration Scheduled Action
+type: module
+description: 'Provides scheduled action support for registrations.'
+package: Registration
+core_version_requirement: ^9.3 || ^10
+configure: entity.registration_scheduled_action.collection
+php: 8.0
+dependencies:
+  - registration:registration
+
+# Information added by Drupal.org packaging script on 2023-10-30
+version: '3.0.2'
+project: 'registration'
+datestamp: 1698635636

@@ -1,0 +1,7 @@
+langcode: pt-br
+status: true
+dependencies: {  }
+name: Tags
+vid: tags
+description: 'Use tags para agrupar artigos sobre tópicos semelhantes em categorias.'
+weight: 0

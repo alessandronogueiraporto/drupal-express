@@ -1,0 +1,5 @@
+name: Push Notification
+description: Push Notitication for node.js
+package: Notifications
+type: module
+core_version_requirement: ^9.3 || ^10

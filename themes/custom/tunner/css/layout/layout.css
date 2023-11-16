@@ -1,0 +1,143 @@
+/**
+ * @file
+ * Superarena layout styling.
+ */
+
+/**
+ * Page Wrapper
+ */
+.page-wrapper{
+  width: 100%;
+  float: left;
+}
+
+/**
+ * Container
+ */
+.layout-container{
+  box-sizing: border-box;
+  max-width: 860px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  
+  position: relative;
+}
+
+/**
+ * Page Main
+ */
+main{
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  min-height: 500px;
+}
+
+.layout-main-wrapper {
+  min-height: 300px;
+}
+
+.layout-main {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/**
+ * Page Header
+ */
+
+.header-wrapper{
+  width: 100%;
+  height: 150px;
+  background: #000000;
+}
+
+.header-wrapper header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.header-admin{
+  height: 100%;
+}
+
+
+/**
+ * Page Footer
+ */
+footer{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  background: #000000;
+}
+
+/**
+ * Page Branding
+ */
+
+.branding-wrapper{
+  width: auto;
+  height: 100%;
+}
+
+.branding-wrapper .region{
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.branding{
+  width: 130px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.branding-text{
+  color: #FFFFFF;
+  width: 200px;
+  height: 57px;
+  margin-left: 20px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 2px solid #333333;
+}
+
+.branding-name{
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(#FFFFFF, #CCCCCC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.branding-slogan{
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: -5px;
+  color: #D5B80D;
+}
+
+/**
+ * Page languages
+ */
+
+.languages{
+  width: 300px;
+  background-color: #CCCCCC;
+}
+
+@media all and (min-width: 851px) {
+  .layout-container {
+    max-width: 1290px;
+  }
+}

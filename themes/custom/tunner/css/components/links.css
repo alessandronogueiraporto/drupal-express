@@ -1,0 +1,26 @@
+/**
+ * @file
+ * Visual styles for Superarena links.
+ */
+
+a,
+a.link{
+  text-decoration: none;
+}
+a:hover,
+a:active,
+a:focus,
+.link:hover,
+.link:active,
+.link:focus {
+  text-decoration: none;
+}
+
+/* Link colors. */
+a{
+  color: #212121;
+}
+
+a:hover{
+  color: #000000;
+}

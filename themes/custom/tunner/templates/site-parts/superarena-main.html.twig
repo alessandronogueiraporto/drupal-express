@@ -1,0 +1,36 @@
+{% if page.banner %}
+  <div id="banner" class="banner">
+      {{ page.banner }}
+  </div>
+{% endif %}
+    
+<div id="main-wrapper" class="layout-main-wrapper layout-container clearfix">
+
+  {{ page.breadcrumb }}
+    
+    <main id="content" class="column main-content" role="main">
+
+    <section class="section">
+        <a id="main-content" tabindex="-1"></a>
+        {{ page.tabs }}
+        {{ page.content }}
+      </section>
+    </main>
+
+    {% if page.sidebar_first %}
+      <div id="sidebar-first" class="column sidebar">
+        <aside class="section" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
+      </div>
+    {% endif %}
+    
+    {% if page.sidebar_second %}
+      <div id="sidebar-second" class="column sidebar">
+        <aside class="section" role="complementary">
+          {{ page.sidebar_second }}
+        </aside>
+      </div>
+    {% endif %}
+    
+</div>

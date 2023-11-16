@@ -1,0 +1,39 @@
+push_notification.config:
+  path: '/admin/config/push_notification/adminsettings'
+  defaults:
+    _form: '\Drupal\push_notification\Form\CustomConfigForm'
+    _title: 'Push notification'
+  requirements:
+    _permission: 'administer site configuration'
+
+push_notification.add:
+  path: '/admin/push-notification/create'
+  defaults:
+    _entity_form: push_notification.add
+    _title: 'Add Push notificaton'
+  requirements:
+    _entity_create_access: 'push_notification'
+
+entity.push_notification.edit_form:
+  path: '/admin/push-notification/{push_notification}/edit'
+  defaults:
+    _entity_form: push_notification.edit
+    _title: 'Edit Push Notification'
+  requirements:
+    _entity_access: 'push_notification.edit'
+
+entity.push_notification.delete_form:
+  path: '/admin/push-notification/{push_notification}/delete'
+  defaults:
+    _entity_form: push_notification.delete
+    _title: 'Delete Push Notification'
+  requirements:
+    _entity_access: 'push_notification.delete'
+
+entity.push_notification.canonical:
+  path: '/admin/push-notification/{push_notification}'
+  defaults:
+    _entity_view: 'push_notification'
+    _title: 'Push Notification'
+  requirements:
+    _entity_access: 'push_notification.view'

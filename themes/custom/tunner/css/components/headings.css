@@ -1,0 +1,39 @@
+/**
+ * Reusable heading classes are included to help modules change the styling of
+ * headings on a page without affecting accessibility.
+ */
+h1,
+.heading-a {
+  color: #000;
+  font-size: 2.357em;
+  font-weight: inherit;
+}
+h2,
+.heading-b {
+  font-size: 1.143em;
+  font-weight: inherit;
+}
+h3,
+.heading-c {
+  font-size: 1.092em;
+  font-weight: inherit;
+}
+h4,
+.heading-d {
+  font-size: 1.05em;
+  font-weight: inherit;
+}
+h5,
+.heading-e {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.889em;
+  font-weight: inherit;
+}
+h6,
+.heading-f {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.67em;
+  font-weight: inherit;
+}

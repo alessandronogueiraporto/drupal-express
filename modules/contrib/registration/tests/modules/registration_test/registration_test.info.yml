@@ -1,0 +1,11 @@
+name: Registration Test
+type: module
+description: 'Test module for Registration.'
+package: Testing
+dependencies:
+  - registration:registration
+
+# Information added by Drupal.org packaging script on 2023-10-30
+version: '3.0.2'
+project: 'registration'
+datestamp: 1698635636

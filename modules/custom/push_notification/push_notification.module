@@ -1,0 +1,11 @@
+<?php
+
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Routing\TrustedRedirectResponse;
+
+/**
+* Implements hook_preprocess_html().
+*/
+function push_notification_preprocess_html(&$variables) {
+	$variables['push_notification'] = \Drupal::config('push_notification.customconfig')->get('push_notification');
+}

@@ -1,0 +1,10 @@
+langcode: pt-br
+status: false
+dependencies: {  }
+id: personal
+label: 'Formulário de contato pessoal'
+recipients: {  }
+reply: ''
+weight: 0
+message: 'Sua mensagem foi enviada.'
+redirect: ''

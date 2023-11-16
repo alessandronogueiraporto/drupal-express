@@ -1,0 +1,11 @@
+langcode: pt-br
+name: 'Super App'
+mail: ''
+slogan: 'Gestão de conteúdo'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

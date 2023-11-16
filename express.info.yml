@@ -1,0 +1,95 @@
+name: Express sites
+type: profile
+description: 'Install with commonly used features pre-configured.'
+core_version_requirement: ^9
+base theme: olivero
+distribution:
+  name: Express
+  
+  install:
+    theme: tunner
+    finish_url: node
+    
+  #langcode: pt-br
+
+dependencies:
+  - block
+  - gin_toolbar
+  - node
+  - taxonomy
+  - unique_entity_title
+  - views
+
+install:
+  # Core
+  - automated_cron
+  - basic_auth
+  - big_pipe
+  - node
+  - history
+  - block
+  - block_content
+  - breakpoint
+  - config
+  - contact
+  - contextual
+  - datetime
+  - dblog
+  - dynamic_page_cache
+  - editor
+  - field_ui
+  - file
+  - help
+  - history
+  - image
+  - jsonapi
+  - language
+  - content_translation
+  - config_translation
+  - media
+  - media_library
+  - menu_link_content
+  - menu_ui
+  - node
+  - options
+  - page_cache
+  - path
+  - search
+  - help
+  - rest
+  - serialization
+  - shortcut
+  - taxonomy
+  - text
+  - toolbar
+  - tour
+  - update
+  - views
+  - views_ui
+  
+  # Extra
+  - admin_toolbar
+  - anonymous_redirect
+  - conditional_fields
+  - crop
+  - ctools
+  - filefield_paths
+  - field_group
+  - gin_toolbar
+  - imageapi_optimize
+  - imageapi_optimize_resmushit
+  - image_widget_crop
+  - imce
+  - jsonapi_extras
+  - maxlength
+  - paragraphs
+  - pathauto
+  - restui
+  - token
+  - unique_entity_title
+  - views_json_source
+  - workflows
+
+themes:
+  - tunner
+  - gin

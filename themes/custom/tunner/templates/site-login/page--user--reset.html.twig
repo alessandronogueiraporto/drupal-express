@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Better Login theme implementation to display a password reset page.
+ *
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - url: The base URL path of the Drupal website.
+ * - logo: Logo path of Drupal website.
+ * - site_name: Site name of Drupal website.
+ * - title: Title of a page.
+ * - register_url: A registration url of Drupal website.
+ *
+ *
+ * Regions:
+ * - page.highlighted: Items for the highlighted region.
+ * - page.content: The main content of the current page.
+ *
+ * @see betterlogin_preprocess_betterlogin()
+ */
+#}
+
+<div class="auth-box">
+
+    <div class="columns">
+      {% include '@superarena/site-login/includes/user-image.html.twig' %}
+    </div>
+
+    <div class="columns">
+      <div class="auth-container">
+        {% include '@superarena/site-login/includes/user-title.html.twig' %}
+        {% include '@superarena/site-login/includes/user-main.html.twig' %}
+        {% include '@superarena/site-login/includes/user-menu.html.twig' %}
+      </div>
+    </div>
+
+</div>

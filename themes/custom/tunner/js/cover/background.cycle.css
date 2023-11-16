@@ -1,0 +1,12 @@
+.centre-container {
+    margin: auto;
+    width: 500px;
+}
+
+.cycle-bg-image{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.1;
+  z-index: 0;
+  position: absolute;
+}

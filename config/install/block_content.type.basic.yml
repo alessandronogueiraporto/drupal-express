@@ -1,0 +1,7 @@
+langcode: pt-br
+status: true
+dependencies: {  }
+id: basic
+label: 'Bloco básico'
+revision: 0
+description: 'Um bloco básico contém um título e um corpo.'
