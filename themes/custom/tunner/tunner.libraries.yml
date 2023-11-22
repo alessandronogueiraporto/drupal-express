@@ -15,10 +15,13 @@ global-styling:
       css/classy/components/inline-form.css: {}
       css/classy/components/link.css: {}
       #Site theme
+      css/components/menu.css: {}
+      css/components/banner.css: {}
       css/components/links.css: {}
       css/components/headings.css: {}
       css/components/tabs.css: {}
       css/components/messages.css: {}
+      css/components/features.css: {}
     theme:
       #Install theme
       css/theme/colors.css: {}

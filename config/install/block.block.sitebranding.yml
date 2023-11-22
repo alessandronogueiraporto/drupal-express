@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - superarena
+    - tunner
 id: sitebranding
-theme: superarena
+theme: tunner
 region: brand
 weight: 0
 provider: null

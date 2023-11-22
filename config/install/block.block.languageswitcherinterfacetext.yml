@@ -4,9 +4,9 @@ dependencies:
   module:
     - language
   theme:
-    - superarena
+    - tunner
 id: languageswitcherinterfacetext
-theme: superarena
+theme: tunner
 region: header
 weight: 0
 provider: null

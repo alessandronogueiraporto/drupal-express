@@ -1,0 +1,67 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the varbase hero slider media.
+ */
+
+use Vardot\Entity\EntityDefinitionUpdateManager;
+use Vardot\Installer\ModuleInstallerFactory;
+
+/**
+ * Implements hook_install().
+ */
+function varbase_heroslider_media_install() {
+
+  // Processor for install: in varbase_heroslider_media.info.yml file.
+  // --------------------------------------------------------------------------.
+  ModuleInstallerFactory::installList('varbase_heroslider_media');
+
+  // Install optional configs.
+  ModuleInstallerFactory::importConfigsFromScanedDirectory('varbase_heroslider_media', '/^field.storage.*\\.(yml)$/i');
+  ModuleInstallerFactory::importConfigsFromScanedDirectory('varbase_heroslider_media', '/^.*\\.(settings.yml)$/i');
+
+  // --------------------------------------------------------------------------.
+  // Entity updates to clear up any mismatched entity and/or field definitions
+  // And Fix changes were detected in the entity type and field definitions.
+  \Drupal::classResolver()
+    ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
+    ->applyUpdates();
+
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function varbase_heroslider_media_requirements($phase) {
+
+  $requirements = [];
+
+  $path = DRUPAL_ROOT . '/libraries/slick/slick/slick.min.js';
+
+  // Is the library found in the root libraries path.
+  $library_found = file_exists($path);
+
+  // If library is not found, then look in the current profile libraries path.
+  if (!$library_found) {
+    $profile_path = drupal_get_path('profile', \Drupal::installProfile());
+    $profile_path .= '/libraries/slick/slick/slick.min.js';
+    // Is the library found in the current profile libraries path.
+    $library_found = file_exists($profile_path);
+  }
+
+  if (!$library_found) {
+    $requirements['slick_library'] = [
+      'title' => t('Slick library missing'),
+      'description' => t('Media Hero Slider requires the slick.min.js library.
+        Download it (https://github.com/kenwheeler/slick) and place it in the
+        libraries folder (/libraries)'),
+      'severity' => REQUIREMENT_ERROR,
+    ];
+  }
+
+  return $requirements;
+}
+
+// Load include all updates and apply them.
+\Drupal::moduleHandler()->loadInclude('varbase_heroslider_media', 'inc', 'include/updates/all');

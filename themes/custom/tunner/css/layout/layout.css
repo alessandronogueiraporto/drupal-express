@@ -1,6 +1,6 @@
 /**
  * @file
- * Superarena layout styling.
+ * Tunner layout styling.
  */
 
 /**
@@ -9,6 +9,7 @@
 .page-wrapper{
   width: 100%;
   float: left;
+  position: relative;
 }
 
 /**
@@ -44,28 +45,6 @@ main{
 }
 
 /**
- * Page Header
- */
-
-.header-wrapper{
-  width: 100%;
-  height: 150px;
-  background: #000000;
-}
-
-.header-wrapper header {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.header-admin{
-  height: 100%;
-}
-
-
-/**
  * Page Footer
  */
 footer{
@@ -91,7 +70,7 @@ footer{
 }
 
 .branding{
-  width: 130px;
+  width: 100px;
   height: 100%;
   display: flex;
   align-items: center;

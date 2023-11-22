@@ -1,0 +1,14 @@
+/**
+ * Menus site
+ */
+
+/* First menu */
+.menu-first {
+  height: 46px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+}
+

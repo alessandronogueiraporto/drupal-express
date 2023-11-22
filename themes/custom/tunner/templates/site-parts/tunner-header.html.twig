@@ -1,6 +1,6 @@
 <div class="header-wrapper">
+  {% include '@tunner/site-parts/tunner-menu-first.html.twig' %}
   <header class="layout-container">
-
     <div class="branding-wrapper">
       {% if page.brand.sitebranding %}
         {{ page.brand }}
@@ -20,6 +20,8 @@
     <div class="header-admin">
       {{ page.header }}
     </div>
-    
   </header>
 </div>
+
+{% include '@tunner/site-parts/tunner-banner.html.twig' %}
+{% include '@tunner/site-parts/tunner-features.html.twig' %}
