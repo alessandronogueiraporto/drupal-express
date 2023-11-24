@@ -26,7 +26,7 @@ display:
       query:
         type: views_query
         options:
-          json_file: /modules/contrib/views_json_source/data/sample/example1.json
+          json_file: '[site:url]modules/contrib/views_json_source/data/sample/example1.json'
           row_apath: data/nodes
           show_errors: 1
       exposed_form:
@@ -195,7 +195,7 @@ display:
       query:
         type: views_query
         options:
-          json_file: /modules/contrib/views_json_source/data/sample/example1.json
+          json_file: '[site:url]modules/contrib/views_json_source/data/sample/example1.json'
           row_apath: data/nodes
           headers: ''
           show_errors: 1
@@ -224,7 +224,7 @@ display:
       query:
         type: views_query
         options:
-          json_file: /modules/contrib/views_json_source/data/sample/example2.json
+          json_file: '/modules/contrib/views_json_source/data/sample/example2.json'
           row_apath: data/%/contents
           headers: ''
           show_errors: 1
@@ -277,7 +277,7 @@ display:
       query:
         type: views_query
         options:
-          json_file: /modules/contrib/views_json_source/data/sample/example3.json
+          json_file: '/modules/contrib/views_json_source/data/sample/example3.json'
           row_apath: nid=2/related
           headers: ''
           show_errors: 1

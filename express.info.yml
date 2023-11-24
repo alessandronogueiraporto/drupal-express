@@ -7,10 +7,13 @@ distribution:
   name: Express
   
   install:
-    theme: tunner
+    theme: genova
     finish_url: node
     
   #langcode: pt-br
+
+translations:
+  - express:express
 
 dependencies:
   - block
@@ -86,5 +89,5 @@ install:
   - workflows
 
 themes:
-  - tunner
+  - genova
   - gin

@@ -1,0 +1,20 @@
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - unique_entity_title
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  unique_entity_title:
+    enabled: false
+name: 'Page News'
+type: news
+description: 'Use news pages to classify news and provide up-to-date content to your audience.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

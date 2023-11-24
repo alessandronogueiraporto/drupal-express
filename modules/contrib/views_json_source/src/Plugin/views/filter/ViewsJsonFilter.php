@@ -244,7 +244,7 @@ class ViewsJsonFilter extends FilterPluginBase {
   public function generate() {
     $operator = $this->options['operator'];
     $key = $this->options['key'];
-    $value = $this->options['value'];
+    $value = !empty($this->value) ? reset($this->value) : $this->options['value'];
 
     return [$key, $operator, $value];
   }

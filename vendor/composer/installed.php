@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'accenture/arena',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '20b09e554f87cab89720e726b70ce0dd2ca68512',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'accenture/arena' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '20b09e554f87cab89720e726b70ce0dd2ca68512',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -91,7 +91,7 @@
         'composer/spdx-licenses' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '5333493fc3b9f0b7dd3e81db1833b7c9b51519a0',
+            'reference' => '9befc2a0c2b0a1e08712b60f700596b17ed14368',
             'type' => 'library',
             'install_path' => __DIR__ . '/./spdx-licenses',
             'aliases' => array(
@@ -175,15 +175,6 @@
             ),
             'dev_requirement' => false,
         ),
-        'drupal/anonymous_redirect' => array(
-            'pretty_version' => '2.2.0-rc1',
-            'version' => '2.2.0.0-RC1',
-            'reference' => '8.x-2.2-rc1',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../modules/contrib/anonymous_redirect',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'drupal/asset_injector' => array(
             'pretty_version' => 'dev-2.x',
             'version' => 'dev-2.x',
@@ -196,14 +187,12 @@
             'dev_requirement' => false,
         ),
         'drupal/backup_migrate' => array(
-            'pretty_version' => 'dev-5.1.x',
-            'version' => 'dev-5.1.x',
-            'reference' => 'bf0e9f1b1fdc74b28465514fb8038a46d06273cd',
+            'pretty_version' => '5.0.0',
+            'version' => '5.0.0.0',
+            'reference' => '5.0.0',
             'type' => 'drupal-module',
             'install_path' => __DIR__ . '/../../modules/contrib/backup_migrate',
-            'aliases' => array(
-                0 => '5.1.x-dev',
-            ),
+            'aliases' => array(),
             'dev_requirement' => false,
         ),
         'drupal/basic_watermark' => array(
@@ -226,21 +215,12 @@
             ),
             'dev_requirement' => false,
         ),
-        'drupal/conditional_fields' => array(
-            'pretty_version' => '4.0.0-alpha1',
-            'version' => '4.0.0.0-alpha1',
-            'reference' => '4.0.0-alpha1',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../modules/contrib/conditional_fields',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'drupal/core' => array(
             'pretty_version' => '9.5.x-dev',
             'version' => '9.5.9999999.9999999-dev',
             'reference' => '3101094b3eb84d8ad264342fcd2b29a7ff912522',
             'type' => 'drupal-core',
-            'install_path' => __DIR__ . '/../../core',
+            'install_path' => __DIR__ . '/../../../../web/core',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -267,6 +247,15 @@
             'replaced' => array(
                 0 => '9.5.x-dev',
             ),
+        ),
+        'drupal/core-composer-scaffold' => array(
+            'pretty_version' => '9.5.x-dev',
+            'version' => '9.5.9999999.9999999-dev',
+            'reference' => '08da8e59c6f1bd0b1a58d18f8addc0d937bbacc7',
+            'type' => 'composer-plugin',
+            'install_path' => __DIR__ . '/../drupal/core-composer-scaffold',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'drupal/core-datetime' => array(
             'dev_requirement' => false,
@@ -502,15 +491,6 @@
             ),
             'dev_requirement' => false,
         ),
-        'drupal/filefield_paths' => array(
-            'pretty_version' => '1.0.0-beta5',
-            'version' => '1.0.0.0-beta5',
-            'reference' => '8.x-1.0-beta5',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../modules/contrib/filefield_paths',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'drupal/flat_taxonomy' => array(
             'pretty_version' => 'dev-1.x',
             'version' => 'dev-1.x',
@@ -602,15 +582,6 @@
             'aliases' => array(
                 0 => '3.x-dev',
             ),
-            'dev_requirement' => false,
-        ),
-        'drupal/imce' => array(
-            'pretty_version' => '2.4.0',
-            'version' => '2.4.0.0',
-            'reference' => '8.x-2.4',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../modules/contrib/imce',
-            'aliases' => array(),
             'dev_requirement' => false,
         ),
         'drupal/jquery_ui' => array(
@@ -980,9 +951,9 @@
             'dev_requirement' => false,
         ),
         'drupal/views_json_source' => array(
-            'pretty_version' => '1.1.0',
-            'version' => '1.1.0.0',
-            'reference' => '8.x-1.1',
+            'pretty_version' => '1.4.0',
+            'version' => '1.4.0.0',
+            'reference' => '8.x-1.4',
             'type' => 'drupal-module',
             'install_path' => __DIR__ . '/../../modules/contrib/views_json_source',
             'aliases' => array(),
@@ -1027,9 +998,9 @@
             'dev_requirement' => false,
         ),
         'ezyang/htmlpurifier' => array(
-            'pretty_version' => 'v4.16.0',
-            'version' => '4.16.0.0',
-            'reference' => '523407fb06eb9e5f3d59889b3978d5bfe94299c8',
+            'pretty_version' => 'v4.17.0',
+            'version' => '4.17.0.0',
+            'reference' => 'bbc513d79acf6691fa9cf10f192c90dd2957f18c',
             'type' => 'library',
             'install_path' => __DIR__ . '/../ezyang/htmlpurifier',
             'aliases' => array(),
@@ -1100,7 +1071,7 @@
         'laminas/laminas-escaper' => array(
             'pretty_version' => '2.14.x-dev',
             'version' => '2.14.9999999.9999999-dev',
-            'reference' => '6778241570b15438ce267a6934359544b45bb418',
+            'reference' => '1138ff999a4003a06a69fae093355948daac5240',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laminas/laminas-escaper',
             'aliases' => array(),
@@ -1109,7 +1080,7 @@
         'laminas/laminas-feed' => array(
             'pretty_version' => '2.23.x-dev',
             'version' => '2.23.9999999.9999999-dev',
-            'reference' => 'e858d719d518ef4f68cc23540b359005ded70cff',
+            'reference' => 'cc75e668e656545b025e6d57950a2fe499f9db26',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laminas/laminas-feed',
             'aliases' => array(),
@@ -1118,7 +1089,7 @@
         'laminas/laminas-stdlib' => array(
             'pretty_version' => '3.19.x-dev',
             'version' => '3.19.9999999.9999999-dev',
-            'reference' => '73ac61057aec7be7e0865a34eb5ef296b0739480',
+            'reference' => 'f0f15730544dfe32ec26f42424933f4b4e325b9b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laminas/laminas-stdlib',
             'aliases' => array(),
@@ -1317,7 +1288,7 @@
         'react/promise' => array(
             'pretty_version' => '2.x-dev',
             'version' => '2.9999999.9999999.9999999-dev',
-            'reference' => '0df56ae6ef77a36db325883c5eefc1ea491a6050',
+            'reference' => '1a8460931ea36dc5c76838fec5734d55c88c6831',
             'type' => 'library',
             'install_path' => __DIR__ . '/../react/promise',
             'aliases' => array(),
@@ -1690,7 +1661,7 @@
         'twig/twig' => array(
             'pretty_version' => '2.x-dev',
             'version' => '2.9999999.9999999.9999999-dev',
-            'reference' => '02262dee807d3bf0e40bbc5d46f628c603ccadad',
+            'reference' => 'ad637405a828601a56f32ccab9a85541c4b66c9d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../twig/twig',
             'aliases' => array(),

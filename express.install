@@ -11,15 +11,101 @@ use Drupal\shortcut\Entity\Shortcut;
 /**
  * Implements hook_install().
  */
-function profile_global_install() {
+function express_global_install() {
   // Set the default and admin theme.
   \Drupal::configFactory()
     ->getEditable('system.theme')
-    ->set('default', 'express')
+    ->set('default', 'genova')
     ->set('admin', 'gin')
     ->set('langcode', 'pt-br')
     ->save(TRUE);
 }
+
+
+
+/**
+ * Implements hook_install_tasks().
+ */
+function express_install_tasks(&$install_state) {
+  \Drupal::logger('INSTALL')->notice('Load install task');
+
+  $tasks = array();
+
+  // Add othes tasks install
+
+  // Importe traduções durante a instalação.
+  $tasks['import_translations'] = array(
+    'display_name' => t('Import Translations'),
+    'type' => 'batch',
+    'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
+    'function' => 'express_import_translations',
+  );
+
+  // Add new step install.
+  $tasks['express_install_settings_form'] = array(
+    'display_name' => t('Configure API'),
+    'type' => 'form',
+    'run' => $install_state['settings_verified'] ? INSTALL_TASK_SKIP : INSTALL_TASK_RUN_IF_NOT_COMPLETED,
+    'function' => 'express_install_settings_form',
+  );
+
+  return $tasks;
+}
+
+/**
+ * Função para importar traduções.
+ */
+/*function express_import_translations(&$install_state) {
+  // Caminho para os arquivos de tradução.
+  $profile_path = $GLOBALS['profile']->getPath();
+  $translation_path = $profile_path . '/translations';
+
+  // Adicione os arquivos de tradução para importação.
+  locale_add_language('pt-br', 'Português do Brasil', 'Português', 'pt_BR');
+  locale('po_import_add', $translation_path . '/express.pt-br.po', 'pt-br');
+
+  // Execute a importação de traduções.
+  locale_translate_overview_form_submit(array(), array());
+}*/
+
+
+/**
+ * Formulário para a nova etapa de instalação.
+ */
+function express_install_settings_form(&$form, &$form_state) {
+  // Adicione elementos de formulário personalizados aqui.
+  $form['first_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('First Name'),
+    '#required' => TRUE,
+  );
+
+  $form['last_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Last Name'),
+    '#required' => TRUE,
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Continue'),
+  );
+
+  return $form;
+}
+
+/**
+ * Submissão do formulário da nova etapa de instalação.
+ */
+function express_install_settings_form_submit(&$form, &$form_state) {
+  // Salvar os dados coletados, se necessário.
+  $first_name = $form_state['values']['first_name'];
+  $last_name = $form_state['values']['last_name'];
+
+  // Definir uma variável de estado para verificar se os dados foram coletados.
+  variable_set('custom_module_install_data_collected', TRUE);
+}
+
 
 /**
  * Implements hook_install().
@@ -38,7 +124,7 @@ function express_install() {
   // Set the default and admin theme.
   \Drupal::configFactory()
     ->getEditable('system.theme')
-    ->set('default', 'express')
+    ->set('default', 'genova')
     ->set('admin', 'gin')
     ->save(TRUE);
 

@@ -2,11 +2,11 @@
 
 namespace Drupal\views_json_source\Event;
 
+use Symfony\Contracts\EventDispatcher\Event;
 use Drupal\views\ViewExecutable;
-use Symfony\Component\EventDispatcher\Event;
 
 /**
- * Class PreCacheEvent.
+ * Event used to modify the json content before setting into cache.
  */
 class PreCacheEvent extends Event {
 

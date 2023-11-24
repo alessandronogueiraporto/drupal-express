@@ -4,9 +4,9 @@ dependencies:
   module:
     - language
   theme:
-    - tunner
+    - genova
 id: languageswitcherinterfacetext
-theme: tunner
+theme: genova
 region: header
 weight: 0
 provider: null

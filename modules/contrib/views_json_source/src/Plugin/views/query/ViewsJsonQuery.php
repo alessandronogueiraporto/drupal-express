@@ -133,7 +133,7 @@ class ViewsJsonQuery extends QueryPluginBase {
     // Check for local file.
     if (empty($parsed['host'])) {
       if (!file_exists(DRUPAL_ROOT . $uri)) {
-        throw new \Exception($this->t('Local file not found.'));
+        throw new \Exception('Local file not found.');
       }
       return file_get_contents(DRUPAL_ROOT . $uri);
     }
@@ -163,7 +163,7 @@ class ViewsJsonQuery extends QueryPluginBase {
 
       // Dispatch event before caching json_content.
       $event = new PreCacheEvent($this->view, $json_content);
-      $this->eventDispatcher->dispatch(PreCacheEvent::VIEWS_JSON_SOURCE_PRE_CACHE, $event);
+      $this->eventDispatcher->dispatch($event, PreCacheEvent::VIEWS_JSON_SOURCE_PRE_CACHE);
       $json_content = $event->getViewData();
 
       $this->cache->set($cache_id, $json_content, $cache_ttl);
@@ -193,6 +193,10 @@ class ViewsJsonQuery extends QueryPluginBase {
     try {
       // Replace any dynamic character if any.
       $url = $this->options['json_file'];
+
+      // Replace any Drupal tokens in the url EG: [site:url].
+      $url = \Drupal::token()->replace($url);
+
       while ($param = $this->getUrlParam()) {
         $url = preg_replace('/' . preg_quote('%', '/') . '/', $param, $url, 1);
       }
@@ -215,7 +219,7 @@ class ViewsJsonQuery extends QueryPluginBase {
     $ret = $this->parse($view, $data);
     $view->execute_time = microtime(TRUE) - $start;
 
-    if (!$ret) {
+    if (!$ret && $this->options['show_errors']) {
       if (version_compare(phpversion(), '5.3.0', '>=')) {
         $tmp = [
           JSON_ERROR_NONE =>
@@ -347,7 +351,8 @@ class ViewsJsonQuery extends QueryPluginBase {
             if (!$check) {
               break;
             }
-          } elseif ($group_conditional_operator === "OR") {
+          }
+          elseif ($group_conditional_operator === "OR") {
             // With OR conditions.
             if ($check) {
               break;
@@ -479,7 +484,7 @@ class ViewsJsonQuery extends QueryPluginBase {
       '#type' => 'textfield',
       '#title' => $this->t('JSON File'),
       '#default_value' => $this->options['json_file'],
-      '#description' => $this->t("The URL or relative path to the JSON file(starting with a slash \"/\")."),
+      '#description' => $this->t('The URL or relative path to the JSON file(starting with a slash "/").<br />Note: Can use Drupal token as well.'),
       '#maxlength' => 1024,
     ];
     $form['row_apath'] = [

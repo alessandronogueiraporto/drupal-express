@@ -1,5 +1,0 @@
-# Schema for the configuration files of the Tunner theme.
-
-tunner_theme.settings:
-  type: theme_settings
-  label: 'Tunner settings'

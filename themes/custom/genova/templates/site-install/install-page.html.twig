@@ -1,0 +1,67 @@
+{#
+/**
+ * @file
+ * Seven theme implementation to display a Drupal installation page.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_install_page()
+ */
+#}
+
+<div class="layout-container-install">
+
+  <div class="page-header">
+    <header class="page-brand">
+      {% if site_name %}
+        <h1>
+          {{ site_name }}
+          {% if site_version %}
+            <span class="site-version">{{ site_version }}</span>
+          {% endif %}
+        </h1>
+      {% endif %}
+    </header>
+
+    {% if title %}
+      <div class="page-title">
+      <h2>{{ title }}</h2>
+      </div>
+    {% endif %}
+
+  </div>
+
+  {% if page.sidebar_first %}
+    <aside class="layout-sidebar-first-install" role="complementary">
+      {{ page.sidebar_first }}
+    </aside>{# /.layout-sidebar-first #}
+  {% endif %}
+
+  <main role="main">
+    {{ page.content }}
+  </main>
+
+  {% if page.sidebar_second %}
+    <aside class="layout-sidebar-second-install" role="complementary">
+      {{ page.sidebar_second }}
+    </aside>{# /.layout-sidebar-second #}
+  {% endif %}
+
+  {% if page.page_bottom %}
+    <footer role="contentinfo">
+      {{ page.page_bottom }}
+    </footer>
+  {% endif %}
+
+</div>{# /.layout-container #}
+
+<div class="page-footer">
+  <div class="page-footer-brand">
+    
+    <div><img src="{{ base_path ~ directory }}/images/logos/express.svg" alt="{{ site_name }}" /></div>
+    <div><img src="{{ base_path ~ directory }}/images/logos/compass.svg" alt="Boreal" /></div>
+    <div><img src="{{ base_path ~ directory }}/images/logos/drupal.svg" alt="Drupal" /></div>
+
+  </div>
+</div>

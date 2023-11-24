@@ -34,8 +34,8 @@ return array(
     '65d28722cbac54041593541c6e32acc5' => $vendorDir . '/longwave/laminas-diactoros/src/functions/normalize_uploaded_files.legacy.php',
     'bef1cc96c7d36a38fa2d1ce60deb9d54' => $vendorDir . '/longwave/laminas-diactoros/src/functions/parse_cookie_header.legacy.php',
     'def43f6c87e4f8dfd0c9e1b1bab14fe8' => $vendorDir . '/symfony/polyfill-iconv/bootstrap.php',
-    '2f69d3914119f042cca9e44442d5ce95' => $baseDir . '/core/includes/bootstrap.inc',
-    '6db5533840cb1ae1bc049452845aa88e' => $baseDir . '/core/includes/guzzle_php81_shim.php',
+    '2f69d3914119f042cca9e44442d5ce95' => $baseDir . '/../../web/core/includes/bootstrap.inc',
+    '6db5533840cb1ae1bc049452845aa88e' => $baseDir . '/../../web/core/includes/guzzle_php81_shim.php',
     '2cffec82183ee1cea088009cef9a6fc3' => $vendorDir . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
     'ad155f8f1cf0d418fe49e248db8c661b' => $vendorDir . '/react/promise/src/functions_include.php',
 );

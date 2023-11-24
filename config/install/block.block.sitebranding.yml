@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - tunner
+    - genova
 id: sitebranding
-theme: tunner
+theme: genova
 region: brand
 weight: 0
 provider: null

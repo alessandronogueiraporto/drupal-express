@@ -34,8 +34,9 @@ class ViewsJsonField extends FieldPluginBase {
    */
   public function renderField($value) {
     if ($this->options['trusted_html'] == 1) {
-        return array('#markup' => $value);
-    } else {
+      return ['#markup' => $value];
+    }
+    else {
       return Html::escape($value);
     }
   }

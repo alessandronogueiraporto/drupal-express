@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Genova theme.
+
+genova_theme.settings:
+  type: theme_settings
+  label: 'Genova settings'

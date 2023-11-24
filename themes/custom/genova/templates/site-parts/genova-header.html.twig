@@ -1,0 +1,27 @@
+<div class="header-wrapper">
+  {% include '@genova/site-parts/genova-menu-first.html.twig' %}
+  <header class="layout-container">
+    <div class="branding-wrapper">
+      {% if page.brand.sitebranding %}
+        {{ page.brand }}
+      {% elseif page.header.sitebranding is empty %}
+        {% if logoSettings == 1 or logoSettings is empty %}
+          <a href="{{ path('<front>') }}" rel="home">
+            <img src="/{{ logoTheme }}" alt="Logo {{ siteName }}" class="branding"/>
+          </a>
+        {% else %}
+          <a href="{{ path('<front>') }}" rel="home">
+            <img src="/{{ logoSite }}" alt="Logo {{ siteName }}" class="branding"/>
+          </a>
+        {% endif %}
+      {% endif %}
+    </div>
+
+    <div class="header-admin">
+      {{ page.header }}
+    </div>
+  </header>
+</div>
+
+{% include '@genova/site-parts/genova-banner.html.twig' %}
+{% include '@genova/site-parts/genova-features.html.twig' %}
