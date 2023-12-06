@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Module to integrate ChatGPT with Drupal.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\node\NodeForm;
+
+/**
+ * Implements hook_help() for module help info.
+ */
+function chatgpt_plugin_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.chatgpt_plugin':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module will integrate OpenAI ChatGPT with our Drupal system. It will add a link on the content add and edit page. On clicking this link, it will open a popup which will provide access to the ChatGPT content search. Content creators can copy the article from the popup and can create a new content with it.');
+      $output .= ' ' . t('For more information, see the <a href=":drupal-org-help">online documentation for the ChatGPT Content Generator module</a>.', [':drupal-org-help' => 'https://www.drupal.org/project/chatgpt_plugin']);
+      $output .= '</p>';
+      return $output;
+  }
+
+}
+
+/**
+ * Implements hook_form_alter() for node form alter.
+ */
+function chatgpt_plugin_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form_object = $form_state->getFormObject();
+  $isNodeForm = $form_object instanceof NodeForm;
+  if ($isNodeForm) {
+    $form['chatgpt_button'] = [
+      '#type' => 'markup',
+      '#title' => t('ChatGPT Search Button'),
+      '#markup' => '<a class="use-ajax" href="/chatgpt/search_form" data-dialog-type="modal" data-dialog-options="{&quot;width&quot;:400}">ChatGPT Content Search</a>',
+    ];
+
+  }
+}

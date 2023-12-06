@@ -3,7 +3,7 @@
         'name' => 'accenture/arena',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '20b09e554f87cab89720e726b70ce0dd2ca68512',
+        'reference' => 'b10deafff27a6182cfb9b68c5f79ed57f167e19d',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'accenture/arena' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '20b09e554f87cab89720e726b70ce0dd2ca68512',
+            'reference' => 'b10deafff27a6182cfb9b68c5f79ed57f167e19d',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -186,15 +186,6 @@
             ),
             'dev_requirement' => false,
         ),
-        'drupal/backup_migrate' => array(
-            'pretty_version' => '5.0.0',
-            'version' => '5.0.0.0',
-            'reference' => '5.0.0',
-            'type' => 'drupal-module',
-            'install_path' => __DIR__ . '/../../modules/contrib/backup_migrate',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'drupal/basic_watermark' => array(
             'pretty_version' => '2.0.0',
             'version' => '2.0.0.0',
@@ -213,6 +204,15 @@
             'aliases' => array(
                 0 => '5.x-dev',
             ),
+            'dev_requirement' => false,
+        ),
+        'drupal/chatgpt_plugin' => array(
+            'pretty_version' => '2.1.0',
+            'version' => '2.1.0.0',
+            'reference' => '2.1.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/chatgpt_plugin',
+            'aliases' => array(),
             'dev_requirement' => false,
         ),
         'drupal/core' => array(
@@ -637,6 +637,26 @@
             ),
             'dev_requirement' => false,
         ),
+        'drupal/jsonapi_resources' => array(
+            'pretty_version' => 'dev-1.x',
+            'version' => 'dev-1.x',
+            'reference' => 'b04ab4828f995c13f9e23d88345277b50a9f3d45',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/jsonapi_resources',
+            'aliases' => array(
+                0 => '1.x-dev',
+            ),
+            'dev_requirement' => false,
+        ),
+        'drupal/jsonapi_views' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'reference' => '8.x-1.1',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/jsonapi_views',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/layout_builder_component_attributes' => array(
             'pretty_version' => 'dev-2.x',
             'version' => 'dev-2.x',
@@ -743,14 +763,12 @@
             'dev_requirement' => false,
         ),
         'drupal/rest_export_nested' => array(
-            'pretty_version' => 'dev-1.x',
-            'version' => 'dev-1.x',
-            'reference' => '4360ec2ba99592c2cc748ac003d56beef0b6a930',
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'reference' => '8.x-1.2',
             'type' => 'drupal-module',
             'install_path' => __DIR__ . '/../../modules/contrib/rest_export_nested',
-            'aliases' => array(
-                0 => '1.x-dev',
-            ),
+            'aliases' => array(),
             'dev_requirement' => false,
         ),
         'drupal/restui' => array(
@@ -1125,7 +1143,7 @@
         'pear/archive_tar' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '94e6e85c988ad7b4004c7f54f536a029edb8f984',
+            'reference' => '5817cd26a70bef1f3f865cc1f6c12c5df0a74b85',
             'type' => 'library',
             'install_path' => __DIR__ . '/../pear/archive_tar',
             'aliases' => array(
@@ -1143,9 +1161,9 @@
             'dev_requirement' => false,
         ),
         'pear/pear-core-minimal' => array(
-            'pretty_version' => 'v1.10.13',
-            'version' => '1.10.13.0',
-            'reference' => 'aed862e95fd286c53cc546734868dc38ff4b5b1d',
+            'pretty_version' => 'v1.10.14',
+            'version' => '1.10.14.0',
+            'reference' => 'a86fc145edb5caedbf96527214ce3cadc9de4a32',
             'type' => 'library',
             'install_path' => __DIR__ . '/../pear/pear-core-minimal',
             'aliases' => array(),
@@ -1303,7 +1321,7 @@
         'rsky/pear-core-min' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => 'v1.10.13',
+                0 => 'v1.10.14',
             ),
         ),
         'seld/jsonlint' => array(

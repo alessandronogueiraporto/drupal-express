@@ -6,7 +6,7 @@
 .cycle-bg-image{
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  opacity: 0.3;
+  opacity: 0.4;
   z-index: 0;
   position: absolute;
 }

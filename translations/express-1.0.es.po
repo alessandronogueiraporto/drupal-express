@@ -1,0 +1,5 @@
+# Spanish, Spanish translation of Express
+# Copyright (c) 2023 by the Spanish, Spanish translation team
+#
+msgid "Use news pages to classify news and provide up-to-date content to your audience."
+msgstr "Utilice páginas de noticias para clasificar noticias y proporcionar contenido actualizado a su audiencia."

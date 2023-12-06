@@ -1,8 +1,0 @@
-langcode: pt-br
-status: true
-dependencies: {  }
-id: zxx
-label: 'Não aplicado'
-direction: ltr
-weight: 4
-locked: true

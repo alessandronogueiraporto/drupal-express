@@ -1,0 +1,11 @@
+name: 'ChatGPT Content Generator'
+type: module
+description: 'Feature to generate contents from ChatGPT'
+package: Custom
+configure: chatgpt_plugin.admin_settings
+core_version_requirement: ^9 || ^10
+
+# Information added by Drupal.org packaging script on 2023-03-05
+version: '2.1.0'
+project: 'chatgpt_plugin'
+datestamp: 1678005354

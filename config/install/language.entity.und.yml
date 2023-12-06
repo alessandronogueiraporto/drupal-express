@@ -1,8 +1,0 @@
-langcode: pt-br
-status: true
-dependencies: {  }
-id: und
-label: 'Não especificado'
-direction: ltr
-weight: 3
-locked: true

@@ -5,15 +5,14 @@ core_version_requirement: ^10
 base theme: olivero
 distribution:
   name: Express
-  
+  #langcode: pt-br
+
+  interface translation project: express
+  interface translation server pattern: profiles/express/%project-%version.%language.po
+
   install:
     theme: genova
     finish_url: node
-    
-  #langcode: pt-br
-
-translations:
-  - express:express
 
 dependencies:
   - block
