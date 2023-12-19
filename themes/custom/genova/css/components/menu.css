@@ -3,12 +3,56 @@
  */
 
 /* First menu */
-.menu-first {
-  height: 46px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #ffffff;
+/* Nav */
+
+.main-menu {
+  display: block;
+  top: 2.5em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: solid 1px #EEEEEE;
 }
 
+.main-menu > ul {
+  width: 100%;
+  display: inline-block;
+  border-radius: 0.35em;
+  box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+  padding: 0;
+}
+
+.main-menu > ul > li {
+  display: inline-block;
+  text-align: center;
+  padding: 0 1.5em 0 1.5em;
+}
+
+.main-menu > ul > li > ul {
+  display: none;
+}
+
+.main-menu > ul > li > a {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  height: 5em;
+  line-height: 5em;
+  -moz-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  -ms-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  outline: 0;
+}
+
+.main-menu > ul > li:hover > a {
+  color: #333333;
+}
+
+.main-menu > ul > li.active > a {
+  color: #333333;
+}

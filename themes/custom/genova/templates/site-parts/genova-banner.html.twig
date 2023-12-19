@@ -1,9 +1,16 @@
-<div class="banner-main">
-
-    {% if page.banner %}
-    <div id="banner" class="banner">
-        {{ page.banner }}
+{% if page.banner %}
+    <div class="banner-main">
+        <div id="banner" class="banner">
+            {{ page.banner }}
+        </div>
     </div>
+{% else %}
+    {% if is_front %}
+        <div class="banner-no">
+            <div>
+                <h1>AS SUAS ESCOLHAS PODEM SER DEFINITIVAS</h1>
+                <p>DESEMPENHO . PREÇO . POLUIÇÃO</p>
+            </div>
+        </div>
     {% endif %}
-
-</div>
+{% endif %}

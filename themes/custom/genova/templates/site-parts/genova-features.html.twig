@@ -1,5 +1,7 @@
-<section class="feature-wrapper">
-    <div class="layout-container">
-        Menu
-    </div>
-</section>
+{% if page.features %}
+    <section class="feature-wrapper">
+        <div class="layout-container">
+            {{ page.features }}
+        </div>
+    </section>
+{% endif %}

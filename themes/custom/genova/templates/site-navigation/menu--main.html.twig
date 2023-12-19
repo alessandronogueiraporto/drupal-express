@@ -31,7 +31,6 @@
   {% if items %}
     {% if menu_level == 0 %}
       <ul{{ attributes.addClass('menu') }}>
-      <div {{ attributes.addClass('menu-list-container') }}>
     {% else %}
       <ul class="menu">
       <div>
@@ -54,7 +53,6 @@
     {% endfor %}
       
   {% endif %}
-  </div>
   </ul>
   
 {% endmacro %}

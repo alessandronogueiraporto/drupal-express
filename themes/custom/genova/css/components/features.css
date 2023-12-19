@@ -1,15 +1,16 @@
-/**
- * Menus site
- */
+/* Features */
+.feature-wrapper,
+.feature-wrapper h2 a {
+  color: #FFFFFF;
+}
 
-/* First menu */
 .feature-wrapper {
   width: 100%;
-  height: 115px;
+  min-height: 400px;
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
   align-items: center;
-  background-color: rgb(11, 96, 169, 0.8);
+  background-color: #44a27a;
 }
 

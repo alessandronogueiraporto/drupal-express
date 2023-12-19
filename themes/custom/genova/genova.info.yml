@@ -41,8 +41,11 @@ quickedit_stylesheets:
 
 regions:
   header: Header
+  menu_primary: Menu primary
+  menu_secondary: Menu secondary
   brand: Brand
   banner: Banner
+  features: features
   messages: Messages
   tabs: Tabs
   content: Content

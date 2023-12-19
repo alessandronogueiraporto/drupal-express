@@ -3,7 +3,7 @@
         'name' => 'accenture/arena',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'b10deafff27a6182cfb9b68c5f79ed57f167e19d',
+        'reference' => '2b554c71d1f8d14fe827bbc1739041e5536354a2',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'accenture/arena' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'b10deafff27a6182cfb9b68c5f79ed57f167e19d',
+            'reference' => '2b554c71d1f8d14fe827bbc1739041e5536354a2',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -183,6 +183,17 @@
             'install_path' => __DIR__ . '/../../modules/contrib/asset_injector',
             'aliases' => array(
                 0 => '2.x-dev',
+            ),
+            'dev_requirement' => false,
+        ),
+        'drupal/backup_migrate' => array(
+            'pretty_version' => 'dev-5.1.x',
+            'version' => 'dev-5.1.x',
+            'reference' => 'bf0e9f1b1fdc74b28465514fb8038a46d06273cd',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/backup_migrate',
+            'aliases' => array(
+                0 => '5.1.x-dev',
             ),
             'dev_requirement' => false,
         ),
@@ -488,6 +499,17 @@
             'install_path' => __DIR__ . '/../../modules/contrib/file_mdm',
             'aliases' => array(
                 0 => '2.x-dev',
+            ),
+            'dev_requirement' => false,
+        ),
+        'drupal/filefield_paths' => array(
+            'pretty_version' => 'dev-1.x',
+            'version' => 'dev-1.x',
+            'reference' => 'e890e5a50552f313f1f24c1b2b8f90d54eac9f9a',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/filefield_paths',
+            'aliases' => array(
+                0 => '1.x-dev',
             ),
             'dev_requirement' => false,
         ),
